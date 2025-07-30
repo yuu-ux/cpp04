@@ -11,6 +11,8 @@ class Brain {
   ~Brain();
 
  private:
-  std::string ideas_[100];
+  static const int kMaxIdeas = 100;
+  std::string ideas_[kMaxIdeas];
 };
 #endif
+
