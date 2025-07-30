@@ -4,12 +4,12 @@
 #include "WrongAnimal.h"
 
 class WrongCat : public WrongAnimal {
-    public:
-        WrongCat();
-        WrongCat(const WrongCat& wrong_cat);
-        WrongCat &operator=(const WrongCat& wrong_cat);
-        ~WrongCat();
-        void makeSound() const;
+ public:
+  WrongCat();
+  WrongCat(const WrongCat& wrong_cat);
+  WrongCat& operator=(const WrongCat& wrong_cat);
+  ~WrongCat();
+  void makeSound() const;
 };
 
 #endif

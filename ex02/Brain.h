@@ -15,4 +15,3 @@ class Brain {
   std::string ideas_[kMaxIdeas];
 };
 #endif
-

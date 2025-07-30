@@ -23,4 +23,3 @@ Brain& Brain::operator=(const Brain& brain) {
 Brain::~Brain() {
   std::cout << "Brain Destructor called" << std::endl;
 }
-
