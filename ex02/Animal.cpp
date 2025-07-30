@@ -1,6 +1,6 @@
 #include "Animal.h"
 
-Animal::Animal() : type_("") {
+Animal::Animal() : type_("Animal") {
   std::cout << "Animal Default constructor called" << std::endl;
 }
 
@@ -25,10 +25,10 @@ Animal::Animal(const std::string& type) : type_(type) {
 }
 
 void Animal::makeSound() const {
-  std::cout << "What kind of animal am I?" << std::endl;
+  std::cout << type_ << "What kind of animal am I?" << std::endl;
 }
 
-std::string Animal::getType() const {
+const std::string& Animal::getType() const {
   return type_;
 }
 

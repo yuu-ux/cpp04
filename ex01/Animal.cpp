@@ -28,7 +28,7 @@ void Animal::makeSound() const {
   std::cout << type_ << " What kind of animal am I?" << std::endl;
 }
 
-std::string Animal::getType() const {
+const std::string& Animal::getType() const {
   return type_;
 }
 
