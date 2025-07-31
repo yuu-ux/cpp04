@@ -26,3 +26,19 @@ Dog::~Dog() {
 void Dog::makeSound() const {
   std::cout << "Woof!" << std::endl;
 }
+
+const std::string& Dog::getIdeas(int index) const {
+	if (index >= Brain::kMaxIdeas) {
+		std::cerr << "index out of range" << std::endl;
+	}
+	return brain_->getIdeas(index);
+}
+
+void Dog::setIdeas(int index, const std::string& ideas) {
+	if (index >= Brain::kMaxIdeas) {
+		std::cerr << "index out of range" << std::endl;
+	}
+	brain_->setIdeas(index, ideas);
+}
+
+

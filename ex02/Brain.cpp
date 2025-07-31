@@ -10,6 +10,7 @@ Brain::Brain(const Brain& brain) {
     ideas_[i] = brain.ideas_[i];
   }
 }
+
 Brain& Brain::operator=(const Brain& brain) {
   std::cout << "Brain Copy assignment operator called" << std::endl;
   if (this != &brain) {
@@ -23,3 +24,19 @@ Brain& Brain::operator=(const Brain& brain) {
 Brain::~Brain() {
   std::cout << "Brain Destructor called" << std::endl;
 }
+
+const std::string& Brain::getIdeas(int index) const {
+	if (index >= kMaxIdeas) {
+		std::cerr << "index out of range" << std::endl;
+	}
+	return ideas_[index];
+}
+
+void Brain::setIdeas(int index, const std::string& ideas) {
+	if (index >= kMaxIdeas) {
+		std::cerr << "index out of range" << std::endl;
+	}
+	ideas_[index] = ideas;
+}
+
+

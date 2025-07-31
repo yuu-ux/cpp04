@@ -9,9 +9,12 @@ class Brain {
   Brain(const Brain& brain);
   Brain& operator=(const Brain& brain);
   ~Brain();
+  const std::string& getIdeas(int index) const;
+  void setIdeas(int index, const std::string& ideas);
+  static const int kMaxIdeas = 100;
 
  private:
-  static const int kMaxIdeas = 100;
   std::string ideas_[kMaxIdeas];
 };
 #endif
+
