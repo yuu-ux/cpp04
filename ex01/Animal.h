@@ -11,7 +11,7 @@ class Animal {
   virtual ~Animal();
   explicit Animal(const std::string& type);
   virtual void makeSound() const;
-  virtual const std::string& getType() const;
+  const std::string& getType() const;
   void setType(std::string);
 
  protected:

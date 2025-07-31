@@ -26,3 +26,17 @@ Cat::~Cat() {
 void Cat::makeSound() const {
   std::cout << "Meow!" << std::endl;
 }
+
+const std::string& Cat::getIdeas(int index) const {
+	if (index >= Brain::kMaxIdeas) {
+		std::cerr << "index out of range" << std::endl;
+	}
+	return brain_->getIdeas(index);
+}
+
+void Cat::setIdeas(int index, const std::string& ideas) {
+	if (index >= Brain::kMaxIdeas) {
+		std::cerr << "index out of range" << std::endl;
+	}
+	brain_->setIdeas(index, ideas);
+}
