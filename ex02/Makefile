@@ -1,7 +1,7 @@
-NAME = Animal
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic-errors
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp Brain.cpp
+NAME := Animal
+CC := c++
+CFLAGS := -Wall -Wextra -Werror -std=c++98 -pedantic-errors
+SRC := main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp Brain.cpp
 
 all: $(NAME)
 
