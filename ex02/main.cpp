@@ -5,15 +5,17 @@
 int main() {
 	{
 		std::cout << "----------------------delete array----------------------" << std::endl;
-		Animal* animals[100];
-		for (int i = 0; i < 50; ++i) {
+		Animal* animals[4];
+		std::cout << "----------------------dog array----------------------" << std::endl;
+		for (int i = 0; i < 2; ++i) {
 			animals[i] = new Dog();
 		}
-		for (int i = 50; i < 100; ++i) {
+		std::cout << "----------------------cat array----------------------" << std::endl;
+		for (int i = 2; i < 4; ++i) {
 			animals[i] = new Cat();
 		}
-
-		for (int i = 0; i < 50; ++i) {
+		std::cout << "----------------------destructor called----------------------" << std::endl;
+		for (int i = 0; i < 4; ++i) {
 			delete animals[i];
 		}
 	}
@@ -27,4 +29,3 @@ int main() {
 		std::cout << "cat1 " << cat1.getIdeas(0) << std::endl;
 	}
 }
-
